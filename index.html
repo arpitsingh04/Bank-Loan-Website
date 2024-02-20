@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Personal Details Page</h1>
+    <hr><br>
+    <div>
+        <form action="" name="regi-form" onsubmit="return onSubmit()" method="post">
+
+            <label>Full Name</label><br><br>
+            <select class="select">
+                <option value="1st">Mr.</option>
+                <option value="1st">Mrs.</option>
+                <option value="1st">Ms.</option>
+            </select>
+            <input type="text" placeholder="Full Name" class="n1"  id="fname" name="firstName"  id="lname"   name="lname"><br>
+            <span id="p1"></span>
+
+
+
+            <br><br>
+
+            <label>E-mail</label><br><br>
+            <input type="email" class="email" placeholder="E-mail"   id="email" name="email" ><br>
+            <span id="p2"></span>
+
+            <br><br>
+
+            <label>PAN</label><br><br>
+            <input type="text" class="pan" placeholder="PAN"   id="pan" name="pan" ><br>
+            <span id="p3"></span>
+
+            <br><br>
+
+
+            <label>Loan Amount</label><br><br>
+                <input type="number" id="number" placeholder="Loan Amount" type="text" min="0" max="1000000" name="number" ><br>
+                <span id="p4"></span>
+                <span id="words"></span>
+
+            <br><br>
+
+            <label>Captcha</label><br><br>
+            <label id="demo"></label> = ?
+            <input class="cp"   type="number" id="captcha" name="captcha" min="0">   <a href="index.html" > New Captcha </a><br>
+              <span id="p5"></span>
+              <span id="p6"></span>
+          
+           
+            <br><br>
+
+ 
+         <button class="submitbtn"  type="submit">Submit </button>  
+  
+        </form>
+    </div>
+    
+
+
+
+
+    <script src = "index.js">  </script>
+</body> 
+</html>
