@@ -106,7 +106,7 @@ function onSubmit(){
         if(x+y==captcha){
 
             alert("User Created Successfully");
-            location.assign("h1.html");
+            location.assign("thankyou.html");
             return false;
         }
             else{
