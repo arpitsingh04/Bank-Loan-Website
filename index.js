@@ -1,7 +1,5 @@
 let otp=0;
 
-// captcha number generate random number
-
         let x = Math.floor((Math.random() * 10) + 1);
         let y = Math.floor((Math.random() * 10) + 1);
       
@@ -10,31 +8,6 @@ let otp=0;
         document.getElementById("captcha").innerHTML;
         console.log(document.getElementById("captcha").innerHTML);
 
-
-
-    // Number To Words
-
-    var a = ['','one ','two ','three ','four ', 'five ','six ','seven ','eight ','nine ','ten ','eleven ','twelve ','thirteen ','fourteen ','fifteen ','sixteen ','seventeen ','eighteen ','nineteen '];
-    var b = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
-
-function inWords (num) {
-    if ((num = num.toString()).length > 9) return 'overflow';
-    n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
-    if (!n) return; var str = '';
-    str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'crore ' : '';
-    str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'lakh ' : '';
-    str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'thousand ' : '';
-    str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'hundred ' : '';
-    str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'Rs.' : '';
-    return str;
-}
-
-document.getElementById('number').onkeyup = function () {
-    document.getElementById('words').innerHTML = inWords(document.getElementById('number').value);
-};
-
-
-// Form Validation
 
 function onSubmit(){
 
@@ -45,9 +18,7 @@ function onSubmit(){
         var number=document.forms["regi-form"]["number"].value;
         var captcha=document.forms["regi-form"]["captcha"].value;
       
-
-    
-        //Validation
+ //Validation
     
         if(firstname.length==0){
             document.getElementById("p1").innerHTML="Enter full name";
@@ -136,8 +107,6 @@ function onSubmit(){
         generateOtp();
     }
     
-
-
 // Generate otp on console
 
     function generateOtp(){
@@ -146,8 +115,7 @@ function onSubmit(){
         console.log(otp);
     }
 
-
-    // Otp And console otp match
+// Otp And console otp match
 
     function verifySubmit(){
 
@@ -155,9 +123,7 @@ function onSubmit(){
 
         if(otp==text){
             alert("Submit OTP Successfully");
-
-
-        }else{
+         }else{
             alert("Erro");
         }
        
